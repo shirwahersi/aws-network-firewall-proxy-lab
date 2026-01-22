@@ -1,0 +1,16 @@
+{
+    "PreDNS": [
+      {
+        "ProxyRuleName": "domain-filter",
+        "Description": "domain filter",
+        "Action": "ALLOW",
+        "Conditions": [
+          {
+            "ConditionOperator": "StringLike",
+            "ConditionKey": "request:DestinationDomain",
+            "ConditionValues": ["*.google.com", "*.bbc.co.uk"]
+          }
+        ]
+      }
+    ]
+}
